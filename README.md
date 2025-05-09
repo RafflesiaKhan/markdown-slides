@@ -18,6 +18,21 @@ A straightforward system for creating beautiful presentations from Markdown file
 
 ## Getting Started
 
+### Creating a Virtual Environment
+
+It is recommended to use a Python virtual environment to manage dependencies for this project. To create and activate a virtual environment, run:
+
+```bash
+# Create a virtual environment named .markdown-slides
+python3 -m venv .markdown-slides
+
+# Activate the virtual environment (on macOS/Linux)
+source .markdown-slides/bin/activate
+
+# On Windows, use:
+.markdown-slides\Scripts\activate
+```
+
 ### Installation
 
 ```bash
@@ -115,3 +130,7 @@ requirements.txt         # Python dependencies
 - [MkDocs Documentation](https://www.mkdocs.org/)
 - [Reveal.js Documentation](https://revealjs.com/)
 - [Markdown Guide](https://www.markdownguide.org/)
+
+# Demo
+
+[Demo.mov](Demo.mov)
