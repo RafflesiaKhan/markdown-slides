@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example Presentation</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/white.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/highlight/monokai.css">
+  <style>
+    .reveal .slides { text-align: left; }
+    .reveal h1, .reveal h2, .reveal h3 { color: #2a76dd; }
+    .reveal pre { width: 100%; box-sizing: border-box; }
+    .reveal pre code { max-height: 500px; padding: 10px; }
+    .back-button {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+      padding: 8px 15px;
+      background: #2a76dd;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .back-button:hover { background: #1a66cd; }
+  </style>
+</head>
+<body>
+  <a href="../.." class="back-button">Back to Docs</a>
+  
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+        <textarea data-template>
+# Example Presentation
+
+<!-- .slide: data-separator="^\n---\n$" data-separator-vertical="^\n--\n$" -->
+
+## Welcome to Markdown Slides
+
+Create beautiful presentations using Markdown
+
+---
+
+## How It Works
+
+- Write your content in Markdown
+- Separate slides with three dashes: `---`
+- Vertical slides with two dashes: `--`
+
+---
+
+## Formatting Examples
+
+Regular text, **bold text**, *italic text*, ~~strikethrough~~
+
+- Bullet points
+- Are easy
+- To create
+
+1. Numbered
+2. Lists
+3. Work too
+
+---
+
+## Code Examples
+
+```javascript
+// JavaScript example
+function hello() {
+  console.log("Hello, world!");
+}
+```
+
+```python
+# Python example
+def hello():
+    print("Hello, world!")
+```
+
+---
+
+## Images
+
+![Image Description](https://via.placeholder.com/500x200)
+
+---
+
+## Vertical Slides
+
+Use `--` to create vertical slides
+
+--
+
+### This is a vertical slide
+
+You can navigate down to see it
+
+--
+
+### Another vertical slide
+
+Use arrow keys or swipe to navigate
+
+---
+
+## Thank You!
+
+You can customize and expand this presentation by editing the Markdown file.
+
+        </textarea>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/zoom/zoom.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+    });
+  </script>
+</body>
+</html>

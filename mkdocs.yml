@@ -1,0 +1,46 @@
+site_name: Markdown Slides
+site_description: Create beautiful presentations using Markdown
+repo_url: https://github.com/yourusername/markdown-slides
+docs_dir: docs
+site_dir: site
+
+nav:
+  - Home: index.md
+  - Slides:
+    - Example Presentation: slides/example.md
+    - How to Create Slides: slides/how-to-create.md
+  - About: about.md
+
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    
+# Configure templates for specific paths
+templates:
+  overrides:
+    - paths: ["slides/*.md"]
+      template: templates/slides.html
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+extra_css:
+  - assets/css/custom.css
+  - assets/css/reveal-integration.css
+
+extra_javascript:
+  - assets/js/reveal-integration.js

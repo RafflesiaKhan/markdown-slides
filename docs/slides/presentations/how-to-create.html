@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Create Slides</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/white.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/highlight/monokai.css">
+  <style>
+    .reveal .slides { text-align: left; }
+    .reveal h1, .reveal h2, .reveal h3 { color: #2a76dd; }
+    .reveal pre { width: 100%; box-sizing: border-box; }
+    .reveal pre code { max-height: 500px; padding: 10px; }
+    .back-button {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+      padding: 8px 15px;
+      background: #2a76dd;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .back-button:hover { background: #1a66cd; }
+  </style>
+</head>
+<body>
+  <a href="../.." class="back-button">Back to Docs</a>
+  
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+        <textarea data-template>
+# How to Create Slides
+
+<!-- .slide: data-separator="^\n---\n$" data-separator-vertical="^\n--\n$" -->
+
+## Creating Your Own Slides
+
+A step-by-step guide to creating presentations with Markdown
+
+---
+
+## Step 1: Create a Markdown File
+
+- Add a new `.md` file in the `docs/slides/` folder
+- Start with a top-level heading for the title
+- Add the slide configuration comment:
+
+```markdown
+<!-- .slide: data-separator="^\n---\n$" data-separator-vertical="^\n--\n$" -->
+```
+
+---
+
+## Step 2: Structure Your Content
+
+- Use `---` to separate horizontal slides
+- Use `--` to create vertical slides
+- Each slide typically starts with a heading
+
+---
+
+## Step 3: Format Your Content
+
+### Headings
+
+```markdown
+# Heading 1
+## Heading 2
+### Heading 3
+```
+
+---
+
+## Lists and Text
+
+Bulleted lists:
+```markdown
+- Item 1
+- Item 2
+  - Nested item
+```
+
+Numbered lists:
+```markdown
+1. First step
+2. Second step
+```
+
+---
+
+## Formatting Text
+
+```markdown
+**Bold text**
+*Italic text*
+~~Strikethrough~~
+> Blockquote
+`Inline code`
+```
+
+---
+
+## Code Blocks
+
+```markdown
+```python
+def hello_world():
+    print("Hello, World!")
+```
+```
+
+---
+
+## Images
+
+```markdown
+![Alt text](path/to/image.jpg)
+```
+
+For responsive images:
+
+```markdown
+<img src="path/to/image.jpg" style="max-width:80%;">
+```
+
+---
+
+## Links
+
+```markdown
+[Link text](https://example.com)
+```
+
+Internal links:
+
+```markdown
+[Go to another slide](another-slide.md)
+```
+
+---
+
+## Step 4: Add to Navigation
+
+Edit `mkdocs.yml` to add your new slide:
+
+```yaml
+nav:
+  - Home: index.md
+  - Slides:
+    - Your New Slide: slides/your-file-name.md
+```
+
+---
+
+## Step 5: View Your Presentation
+
+- Run `mkdocs serve` 
+- Go to `/slides/your-file-name.html`
+- Use arrow keys to navigate
+
+---
+
+## Advanced Features
+
+- Fragments (revealed one by one)
+- Speaker notes
+- Custom backgrounds
+- Transitions
+
+Check Reveal.js documentation for more!
+
+---
+
+## That's It!
+
+Now you're ready to create amazing presentations with Markdown
+
+        </textarea>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/zoom/zoom.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+    });
+  </script>
+</body>
+</html>

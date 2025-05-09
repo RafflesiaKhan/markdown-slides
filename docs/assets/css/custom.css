@@ -1,0 +1,64 @@
+/* Custom styles for MkDocs */
+:root {
+  --md-primary-fg-color: #2a76dd;
+  --md-accent-fg-color: #5294e2;
+}
+
+/* Improve readability */
+.md-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.md-content p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.md-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Style presentation links */
+.presentation-link {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 15px;
+  background-color: var(--md-primary-fg-color);
+  color: white !important;
+  border-radius: 4px;
+  text-decoration: none !important;
+  transition: background-color 0.3s;
+}
+
+.presentation-link:hover {
+  background-color: var(--md-accent-fg-color);
+}
+
+/* Responsive images */
+.md-content img {
+  max-width: 100%;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Code blocks */
+.md-content pre {
+  border-radius: 4px;
+}
+
+/* Custom admonitions */
+.md-typeset .admonition.slide,
+.md-typeset details.slide {
+  border-left-color: #ff5252;
+}
+
+.md-typeset .slide > .admonition-title,
+.md-typeset .slide > summary {
+  background-color: rgba(255, 82, 82, 0.1);
+}
+
+.md-typeset .slide > .admonition-title::before,
+.md-typeset .slide > summary::before {
+  background-color: #ff5252;
+}
